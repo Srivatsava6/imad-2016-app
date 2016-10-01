@@ -9,6 +9,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/newpage1',function(req,res){
+    res.send("the file requested is on process")
+});
+app.get('/newpage3',function(req,res){
+    res.send("the file requested is on process")
+});
+app.get('/newpage2',function(req,res){
+    res.send("the file requested is on process")
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
