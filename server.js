@@ -10,13 +10,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/newpage1',function(req,res){
-    res.send("the file requested is on process")
+    res.send('the file requested is on process');
 });
 app.get('/newpage3',function(req,res){
-    res.send("the file requested is on process")
+    res.send('the file requested is on process');
 });
 app.get('/newpage2',function(req,res){
-    res.send("the file requested is on process")
+    res.send('the file requested is on process');
 });
 
 app.get('/ui/style.css', function (req, res) {
