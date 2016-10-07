@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var webpages={
-    newpage-one : {
+    newpage1: {
         title: 'article 1: srivatsavas first blog ',
         heading:'Article1',
         date: '7 october 2016',
@@ -15,7 +15,7 @@ var webpages={
                 This is my first html page in hasura
             </p>`
     },
-    newpage-two: {
+    newpage2: {
          title: 'article 2: srivatsavas second blog ',
         heading:'Article2',
         date: '8 october 2016',
@@ -27,7 +27,7 @@ var webpages={
                  This is my second html page in hasura. This is my second html page in hasura. This is my second html page in hasura.
             </p>`
     },
-    newpage-three: {
+    newpage3: {
         title: 'article 2: srivatsavas second blog ',
         heading:'Article2',
         date: '8 october 2016',
