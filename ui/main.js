@@ -1,2 +1,2 @@
 console.log('Loaded!');
-console.alert("hi the page got loaded");
+alert("hi the page got loaded");
