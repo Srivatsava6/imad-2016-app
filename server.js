@@ -75,6 +75,7 @@ function createTemplate(data){
 </html>`
 
 ;
+return newTemplate;
     
 }
 
