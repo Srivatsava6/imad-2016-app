@@ -82,8 +82,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:newpage',function(req,res){
-    var newpage=req.parms.webpage;
+app.get('/:articleName',function(req,res){
+    var articleName=req.parms.articleName;
   res.send(createTemplate(webpages[newpage]));
 });
 
