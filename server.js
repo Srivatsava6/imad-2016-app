@@ -83,6 +83,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:newpage',function(req,res){
+    var newpage=req.parms.webpage;
   res.send(createTemplate(webpages[newpage]));
 });
 
