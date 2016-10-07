@@ -5,12 +5,81 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var webpages={
+    newpage1 : {
+        title: 'article 1: srivatsavas first blog ',
+        heading:'Article1',
+        date: '7 october 2016',
+        content:`
+                <p>
+                This is my first html page in hasura
+            </p>`
+    },
+    newpage2: {
+         title: 'article 2: srivatsavas second blog ',
+        heading:'Article2',
+        date: '8 october 2016',
+        content:`
+                   <p>
+                This is my second html page in hasura. This is my second html page in hasura. This is my second html page in hasura.
+            </p>
+            <p>
+                 This is my second html page in hasura. This is my second html page in hasura. This is my second html page in hasura.
+            </p>`
+    },
+    newpage3: {
+        title: 'article 2: srivatsavas second blog ',
+        heading:'Article2',
+        date: '8 october 2016',
+        content:`  <p>
+                This is my third html page in hasura.  This is my third html page in hasura.  This is my third html page in hasura.
+            </p>
+            <p>
+                  This is my third html page in hasura.  This is my third html page in hasura.  This is my third html page in hasura.
+            </p>
+             <p>
+                  This is my third html page in hasura.  This is my third html page in hasura.  This is my third html page in hasura.
+            </p>`
+    }
+};
+
+function createTemplate(data){
+    var newTemplate= `
+    <html>
+    <head>
+        <title>
+           ${title}
+        </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width ,  initial-scale=1"/>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <a href="/">HOME</a>
+        </div>
+        <hr/>
+        <h3> ${heading}</h3>
+        <div>
+           ${date}
+        </div>
+        <div>
+          ${content}
+        </div>
+        </div>
+    </body>
+</html>`
+
+;
+    
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/newpage1',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'newpage1.html'));
+app.get(':/newpage',function(req,res){
+  res.send(createTemplate(webpages[newpage]));
 });
 app.get('/newpage2',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'newpage2.html'));
